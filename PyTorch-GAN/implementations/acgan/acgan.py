@@ -128,7 +128,7 @@ discriminator.apply(weights_init_normal)
 
 # Configure data loader
 os.makedirs("../../data/FashionMNIST", exist_ok=True)
-dataloader = torch.utils.data.FashionMNIST(
+dataloader = torch.utils.data.DataLoader(
     datasets.FashionMNIST(
         "../../data/FashionMNIST",
         train=True,
