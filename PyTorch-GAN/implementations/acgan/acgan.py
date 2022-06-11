@@ -127,10 +127,10 @@ generator.apply(weights_init_normal)
 discriminator.apply(weights_init_normal)
 
 # Configure data loader
-os.makedirs("../../data/Flowers102", exist_ok=True)
-dataloader = torch.utils.data.DataLoader(
+os.makedirs("../../data/FashionMNIST", exist_ok=True)
+dataloader = torch.utils.data.FashionMNIST(
     datasets.Flowers102(
-        "../../data/Flowers102",
+        "../../data/FashionMNIST",
         train=True,
         download=True,
         transform=transforms.Compose(
