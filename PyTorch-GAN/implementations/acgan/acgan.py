@@ -127,10 +127,10 @@ generator.apply(weights_init_normal)
 discriminator.apply(weights_init_normal)
 
 # Configure data loader
-os.makedirs("../../data/CelebA", exist_ok=True)
+os.makedirs("../../data/Flowers102", exist_ok=True)
 dataloader = torch.utils.data.DataLoader(
-    datasets.CelebA(
-        "../../data/CelebA",
+    datasets.Flowers102(
+        "../../data/Flowers102",
         train=True,
         download=True,
         transform=transforms.Compose(
